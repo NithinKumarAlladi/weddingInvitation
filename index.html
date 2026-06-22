@@ -155,19 +155,33 @@
     }
     
     /* Fast-moving background image layer */
-    .hero-background {
+    /* .hero-background {
       min-height: 150svh;
       position: absolute;
       inset: -12%;
       z-index: -3;
-      /* background:
-        linear-gradient(180deg, rgba(31,16,12,.18), rgba(31,16,12,.58)),
-        url("https://images.unsplash.com/photo-1654126728585-5a72e46a53a6?auto=format&fit=crop&w=1800&q=90")
-        center/cover; */
       background:
           linear-gradient(180deg, rgba(25, 18, 12, 0.28) 0%, rgba(25, 18, 12, 0.18) 42%, rgba(25, 18, 12, 0.62) 100% ),
           url("hero-couple.png") center/ cover;
       transform: translateY(0) scale(1.08);
+      will-change: transform;
+    } */
+
+    .hero-background {
+      position: absolute;
+      top: -25%;
+      right: -12%;
+      bottom: -25%;
+      left: -12%;
+      z-index: -3;
+    
+      background:
+        linear-gradient(180deg, rgba(31,16,12,.18), rgba(31,16,12,.62)),
+        url("hero-couple.png")
+        center center / cover no-repeat;
+    
+      transform: translateY(0) scale(1.12);
+      transform-origin: center;
       will-change: transform;
     }
     
