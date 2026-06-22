@@ -80,7 +80,7 @@
 
     .upload-label input { display: none; }
 
-    .hero {
+    /* .hero {
       min-height: 150svh;
       display: grid;
       place-items: center;
@@ -92,6 +92,27 @@
         linear-gradient(180deg, rgba(31,16,12,.15), rgba(31,16,12,.45)),
         url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
         center/cover;
+      color: #fffaf2;
+    } */
+    .hero {
+      min-height: 150svh;
+      display: grid;
+      place-items: center;
+      padding: 70px 22px 35px;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    
+      /* Your uploaded couple photo */
+      background:
+        linear-gradient(
+          180deg,
+          rgba(25, 18, 12, 0.28) 0%,
+          rgba(25, 18, 12, 0.18) 42%,
+          rgba(25, 18, 12, 0.62) 100%
+        ),
+        url("hero-couple.jpg") center 42% / cover no-repeat;
+    
       color: #fffaf2;
     }
 
