@@ -550,33 +550,33 @@
   <script>
     // ---------- Background music ----------
     const music = document.getElementById("bgMusic");
-    const musicButton = document.getElementById("musicButton");
-    const musicUpload = document.getElementById("musicUpload");
+    // const musicButton = document.getElementById("musicButton");
+    // const musicUpload = document.getElementById("musicUpload");
 
     music.volume = 0.45;
 
-    musicButton.addEventListener("click", async () => {
-      try {
-        if (music.paused) {
-          await music.play();
-          musicButton.textContent = "❚❚ Pause music";
-        } else {
-          music.pause();
-          musicButton.textContent = "♫ Play music";
-        }
-      } catch (error) {
-        alert("Please choose an audio file first, or add wedding-song.mp3 beside index.html.");
-      }
-    });
+    // musicButton.addEventListener("click", async () => {
+    //   try {
+    //     if (music.paused) {
+    //       await music.play();
+    //       musicButton.textContent = "❚❚ Pause music";
+    //     } else {
+    //       music.pause();
+    //       musicButton.textContent = "♫ Play music";
+    //     }
+    //   } catch (error) {
+    //     alert("Please choose an audio file first, or add wedding-song.mp3 beside index.html.");
+    //   }
+    // });
 
-    musicUpload.addEventListener("change", (event) => {
-      const file = event.target.files[0];
-      if (!file) return;
+    // musicUpload.addEventListener("change", (event) => {
+    //   const file = event.target.files[0];
+    //   if (!file) return;
 
-      music.src = URL.createObjectURL(file);
-      music.play();
-      musicButton.textContent = "❚❚ Pause music";
-    });
+    //   music.src = URL.createObjectURL(file);
+    //   music.play();
+    //   musicButton.textContent = "❚❚ Pause music";
+    // });
 
     // ---------- Countdown ----------
     // Change this to your wedding date/time.
