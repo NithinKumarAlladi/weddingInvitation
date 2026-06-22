@@ -524,7 +524,7 @@
       musicStarted = true;
   
       // Music is now playing and will continue while the guest scrolls.
-      window.removeEventListener("scroll", startBackgroundMusic);
+      window.removeEventListener("click", startBackgroundMusic);
     } catch (error) {
       // Some mobile browsers may require a tap before they allow sound.
       console.warn("Music could not start on scroll:", error);
@@ -532,7 +532,7 @@
   }
   
   // Start once the guest begins scrolling down the invitation.
-  window.addEventListener("scroll", startBackgroundMusic, {
+  window.addEventListener("click", startBackgroundMusic, {
     passive: true
   });
     
