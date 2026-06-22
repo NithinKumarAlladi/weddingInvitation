@@ -375,12 +375,12 @@
       -webkit-backdrop-filter: blur(8px);
       transition: transform 0.2s ease, background 0.2s ease;
     }
-    
+
     .music-toggle:hover {
       transform: translateY(-2px);
       background: rgba(77, 49, 39, 0.68);
     }
-    
+
     .music-toggle:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 3px;
@@ -487,7 +487,7 @@
     </p>
 
     <div class="event-grid">
-      <article class="event-card">
+      <article class="event-card" data-invitee="all">
         <h3>Pellikoduku &amp; Upanayanam</h3>
         <p>Saturday, 27 June 2026</p>
         <p>9:00 AM onwards</p>
@@ -496,7 +496,7 @@
         <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank" rel="noopener noreferrer">View location →</a>
       </article>
 
-      <article class="event-card">
+      <article class="event-card" data-invitee="ff">
         <h3>Haldi</h3>
         <p>Sunday, 28 June 2026</p>
         <p>11:00 AM onwards</p>
@@ -505,7 +505,7 @@
         <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank" rel="noopener noreferrer">View location →</a>
       </article>
 
-      <article class="event-card">
+      <article class="event-card" data-invitee="ff">
         <h3>Sangeet</h3>
         <p>Sunday, 28 June 2026</p>
         <p>7:00 PM onwards</p>
@@ -514,14 +514,14 @@
         <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank" rel="noopener noreferrer">View location →</a>
       </article>
 
-      <article class="event-card">
+      <article class="event-card" data-invitee="all">
         <h3>Muhurtham</h3>
         <p>Friday, 3 July 2026</p>
         <p>10:05 AM · Umiya Mahal, Chennai</p>
         <a href="https://maps.app.goo.gl/56Nv5iwMgk4fgaxx8" target="_blank" rel="noopener noreferrer">View location →</a>
       </article>
 
-      <article class="event-card">
+      <article class="event-card" data-invitee="ff">
         <h3>Srinivasa Kalyanam</h3>
         <p>Sunday, 5 July 2026</p>
         <p>9 AM onwards</p>
@@ -583,6 +583,20 @@
   <footer>POORVAJA &amp; NITHIN · MADE WITH LOVE</footer>
 
   <script>
+    // ---------- Invitee-based event visibility ----------
+    // Default: show only cards marked "all".
+    // Use ?Invitee=ff to show every event card.
+    const inviteeParam = new URLSearchParams(window.location.search)
+      .get("Invitee")
+      ?.trim()
+      .toLowerCase();
+
+    const showAllEvents = inviteeParam === "ff";
+
+    document.querySelectorAll(".event-card").forEach((card) => {
+      card.hidden = !showAllEvents && card.dataset.invitee !== "all";
+    });
+
     // ---------- Background music ----------
     const music = document.getElementById("bgMusic");
     const musicToggle = document.getElementById("musicToggle");
