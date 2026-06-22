@@ -374,9 +374,9 @@
 </head>
 
 <body>
-  <audio id="bgMusic" loop preload="auto">
+  <!-- <audio id="bgMusic" loop preload="auto">
     <source src="wedding-song.mp3" type="audio/mpeg" />
-  </audio>
+  </audio> -->
 
   <header class="hero">
     <div class="hero-content">
@@ -510,31 +510,31 @@
   <script>
 
   // ---------- Background music: start on first scroll ----------
-  const music = document.getElementById("bgMusic");
+  // const music = document.getElementById("bgMusic");
   
-  music.volume = 0.45;
+  // music.volume = 0.45;
   
-  let musicStarted = false;
+  // let musicStarted = false;
   
-  async function startBackgroundMusic() {
-    if (musicStarted) return;
+  // async function startBackgroundMusic() {
+  //   if (musicStarted) return;
   
-    try {
-      await music.play();
-      musicStarted = true;
+  //   try {
+  //     await music.play();
+  //     musicStarted = true;
   
-      // Music is now playing and will continue while the guest scrolls.
-      window.removeEventListener("click", startBackgroundMusic);
-    } catch (error) {
-      // Some mobile browsers may require a tap before they allow sound.
-      console.warn("Music could not start on scroll:", error);
-    }
-  }
+  //     // Music is now playing and will continue while the guest scrolls.
+  //     window.removeEventListener("click", startBackgroundMusic);
+  //   } catch (error) {
+  //     // Some mobile browsers may require a tap before they allow sound.
+  //     console.warn("Music could not start on scroll:", error);
+  //   }
+  // }
   
-  // Start once the guest begins scrolling down the invitation.
-  window.addEventListener("click", startBackgroundMusic, {
-    passive: true
-  });
+  // // Start once the guest begins scrolling down the invitation.
+  // window.addEventListener("click", startBackgroundMusic, {
+  //   passive: true
+  // });
     
     // ---------- Countdown ----------
     // Change this to your wedding date/time.
