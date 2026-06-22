@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nithin & Poorvaja — Wedding Invitation</title>
+  <title>Poorvaja & Nithin — Wedding Invitation</title>
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap");
@@ -46,21 +46,41 @@
       z-index: 50;
     }
 
-    .hero {
-      min-height: 150svh;
-      display: grid;
-      place-items: center;
-      padding: 70px 22px 35px;
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(31,16,12,.15), rgba(31,16,12,.45)),
-        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-      color: #fffaf2;
+    @media (min-width: 1024px) {
+      .hero {
+        min-height: 150svh;
+        display: grid;
+        place-items: center;
+        padding: 70px 22px 35px;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(25, 18, 12, 0.28) 0%, rgba(25, 18, 12, 0.18) 42%, rgba(25, 18, 12, 0.62) 100% ),
+          /* linear-gradient(180deg, rgba(31,16,12,.15), rgba(31,16,12,.45)), */
+          url("hero-couple.png") center 42% / cover no-repeat;
+      
+        color: #fffaf2;
+      }
     }
-
+    @media (max-width: 1023px) {
+      .hero {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 70px 22px 35px;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(25, 18, 12, 0.28) 0%, rgba(25, 18, 12, 0.18) 42%, rgba(25, 18, 12, 0.62) 100% ),
+          /* linear-gradient(180deg, rgba(31,16,12,.15), rgba(31,16,12,.45)), */
+          url("hero-couple.png") center 42% / cover no-repeat;
+      
+        color: #fffaf2;
+      }
+    }
+    
     .hero::before,
     .hero::after {
       content: "✦";
@@ -86,6 +106,13 @@
       font-size: 11px;
       margin-bottom: 26px;
       opacity: .9;
+    }
+
+    .mantra {
+      font-family: "Noto Serif Devanagari", serif;
+      font-size: clamp(1.15rem, 3vw, 1.7rem);
+      margin-bottom: 32px;
+      color: #ffe9b7;
     }
 
     .names {
@@ -163,22 +190,9 @@
       box-shadow: 0 16px 60px rgba(73,37,27,.07);
     }
 
-    .blessing .small {
-      color: var(--gold);
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      font-size: 11px;
-    }
-
-    .blessing h3 {
-      font: 600 clamp(2rem, 5vw, 3.5rem)/1 "Cormorant Garamond", serif;
-      margin: 18px 0;
-    }
-
-    .blessing p {
-      margin: 7px;
-      color: var(--muted);
-    }
+    .blessing .small { color: var(--gold); letter-spacing: .16em; text-transform: uppercase; font-size: 11px; }
+    .blessing h3 { font: 600 clamp(2rem, 5vw, 3.5rem)/1 "Cormorant Garamond", serif; margin: 18px 0; }
+    .blessing p { margin: 7px; color: var(--muted); }
 
     .event-grid {
       display: grid;
@@ -191,7 +205,7 @@
       min-height: 330px;
       position: relative;
       overflow: hidden;
-      border-radius: 170px 170px 16px 16px;
+      border-radius: 16px;
       padding: 30px 22px;
       display: flex;
       flex-direction: column;
@@ -211,40 +225,21 @@
       z-index: -1;
       background: linear-gradient(0deg, rgba(45,18,13,.86), rgba(45,18,13,.08) 70%);
     }
-
-    .event-card:nth-child(1) {
-      background: url("https://images.unsplash.com/photo-1672798083354-e284cdc2a2ad?auto=format&fit=crop&w=900&q=80") center/cover;
-    }
-
-    .event-card:nth-child(2) {
-      background: url("https://images.unsplash.com/photo-1672390413823-abcd29e61beb?auto=format&fit=crop&w=900&q=80") center/cover;
-    }
-
-    .event-card:nth-child(3) {
-      background: url("https://images.unsplash.com/photo-1734978052972-3471a79fa110?auto=format&fit=crop&w=900&q=80") center/cover;
-    }
-
-    .event-card:nth-child(4) {
-      background: url("https://images.unsplash.com/photo-1630764883473-e8c2056f0589?auto=format&fit=crop&w=900&q=80") center/cover;
-    }
-
-    .event-card:nth-child(5) {
-      background: url("https://images.unsplash.com/photo-1762090420353-47d4a0b3f6af?auto=format&fit=crop&w=900&q=80") center/cover;
-    }
+    
+    .event-card:nth-child(1) { background: url("https://images.unsplash.com/photo-1672798083354-e284cdc2a2ad?auto=format&fit=crop&w=900&q=80") center/cover; }
+    .event-card:nth-child(2) { background: url("https://images.unsplash.com/photo-1672390413823-abcd29e61beb?auto=format&fit=crop&w=900&q=80") center/cover; }
+    .event-card:nth-child(3) { background: url("https://images.unsplash.com/photo-1734978052972-3471a79fa110?auto=format&fit=crop&w=900&q=80") center/cover; }
+    .event-card:nth-child(4) { background: url("https://images.unsplash.com/photo-1630764883473-e8c2056f0589?auto=format&fit=crop&w=900&q=80") center/cover; }
+    .event-card:nth-child(5) { background: url("https://images.unsplash.com/photo-1762090420353-47d4a0b3f6af?auto=format&fit=crop&w=900&q=80") center/cover; }
 
     .event-card h3 {
       font: 600 2.6rem/1 "Cormorant Garamond", serif;
       margin: 0 0 8px;
     }
 
-    .event-card p {
-      margin: 3px 0;
-      font-size: 13px;
-      opacity: .92;
-    }
+    .event-card p { margin: 3px 0; font-size: 13px; opacity: .92; }
 
-    .event-card a,
-    .button {
+    .event-card a, .button {
       display: inline-block;
       margin-top: 16px;
       color: white;
@@ -272,17 +267,8 @@
       opacity: .08;
     }
 
-    .story h2 {
-      text-align: left;
-      position: relative;
-    }
-
-    .story p {
-      max-width: 690px;
-      line-height: 1.95;
-      color: rgba(255,249,237,.82);
-      position: relative;
-    }
+    .story h2 { text-align: left; position: relative; }
+    .story p { max-width: 690px; line-height: 1.95; color: rgba(255,249,237,.82); position: relative; }
 
     .info-grid {
       display: grid;
@@ -300,22 +286,9 @@
       border-radius: 14px;
     }
 
-    .info-icon {
-      font-size: 27px;
-      color: var(--gold);
-    }
-
-    .info-card h3 {
-      font: 600 1.7rem "Cormorant Garamond", serif;
-      margin: 14px 0 8px;
-    }
-
-    .info-card p {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.7;
-      margin: 0;
-    }
+    .info-icon { font-size: 27px; color: var(--gold); }
+    .info-card h3 { font: 600 1.7rem "Cormorant Garamond", serif; margin: 14px 0 8px; }
+    .info-card p { color: var(--muted); font-size: 13px; line-height: 1.7; margin: 0; }
 
     .countdown-wrap {
       text-align: center;
@@ -332,18 +305,8 @@
     }
 
     .time-box { min-width: 68px; }
-
-    .time-box strong {
-      display: block;
-      font: 600 clamp(2.4rem, 7vw, 4.5rem)/1 "Cormorant Garamond", serif;
-    }
-
-    .time-box span {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      color: var(--muted);
-    }
+    .time-box strong { display: block; font: 600 clamp(2.4rem, 7vw, 4.5rem)/1 "Cormorant Garamond", serif; }
+    .time-box span { font-size: 10px; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
 
     .rsvp {
       text-align: center;
@@ -358,10 +321,7 @@
       transition: transform .2s ease, background .2s ease;
     }
 
-    .rsvp .button:hover {
-      transform: translateY(-3px);
-      background: #5e1725;
-    }
+    .rsvp .button:hover { transform: translateY(-3px); background: #5e1725; }
 
     footer {
       padding: 26px;
@@ -406,21 +366,16 @@
     }
 
     @media (max-width: 460px) {
-      .event-grid,
-      .info-grid { grid-template-columns: 1fr; }
-
+      .event-grid, .info-grid { grid-template-columns: 1fr; }
       .event-card { min-height: 320px; }
-
       .blessing { border-radius: 100px 100px 20px 20px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Keep wedding-song.mp3 in the same folder as this index.html file -->
   <audio id="bgMusic" loop preload="auto">
-    <source src="./wedding-song.mp3" type="audio/mpeg" />
-    Your browser does not support background audio.
+    <source src="wedding-song.mp3" type="audio/mpeg" />
   </audio>
 
   <header class="hero">
@@ -440,14 +395,13 @@
       <h3>Our beloved families</h3>
       <p>Smt. Lakshmi & Shri Ramanadam Alladi</p>
       <p>— and —</p>
-      <p>Smt. Vanaja & Shri Nagendra Nagasuru</p>
+      <p>Smt. Vanaja & Shri Narendra Nath Nagasuru</p>
     </div>
   </section>
 
   <section class="reveal">
     <div class="section-kicker">We invite you to celebrate</div>
     <h2>Moments before<br>the forever</h2>
-
     <p class="intro-copy">
       Join us as we celebrate the beginning of our new chapter with laughter,
       blessings, music, and the people we love most.
@@ -455,38 +409,46 @@
 
     <div class="event-grid">
       <article class="event-card">
-        <h3>Pellikoduku – Upanayanam</h3>
+        <h3>Pellikoduku - Upanayanam </h3>
         <p>Saturday, 27 June 2026</p>
-        <p>9:00 AM onwards · At Home</p>
-        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank" rel="noopener">View location →</a>
+        <p>9:00 AM onwards</p>
+        <p>At Home - Aashirwad, Panchavati colony,</p>
+        <p>New Bowenpally, Hyderabad.</p>
+        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank">View location →</a>
       </article>
 
       <article class="event-card">
         <h3>Haldi</h3>
         <p>Sunday, 28 June 2026</p>
-        <p>11:00 AM · At Home</p>
-        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank" rel="noopener">View location →</a>
+        <p>11:00 AM onwards</p>
+        <p>At Home - Aashirwad, Panchavati colony,</p>
+        <p>New Bowenpally, Hyderabad.</p>
+        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank">View location →</a>
       </article>
 
       <article class="event-card">
         <h3>Sangeet</h3>
         <p>Sunday, 28 June 2026</p>
-        <p>7:00 PM onwards · At Home</p>
-        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank" rel="noopener">View location →</a>
+        <p>7:00 PM onwards</p>
+        <p>At Home - Aashirwad, Panchavati colony,</p>
+        <p>New Bowenpally, Hyderabad.</p>
+        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank">View location →</a>
       </article>
 
       <article class="event-card">
         <h3>Muhurtham</h3>
-        <p>Friday, 3 July 2026</p>
+        <p>Thursday, 3 July 2026</p>
         <p>10:05 AM · Umiya Mahal, Chennai</p>
-        <a href="https://maps.app.goo.gl/56Nv5iwMgk4fgaxx8" target="_blank" rel="noopener">View location →</a>
+        <a href="https://maps.app.goo.gl/56Nv5iwMgk4fgaxx8" target="_blank">View location →</a>
       </article>
 
       <article class="event-card">
         <h3>Srinivasa Kalyanam</h3>
         <p>Sunday, 5 July 2026</p>
-        <p>9:00 AM onwards · At Home</p>
-        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank" rel="noopener">View location →</a>
+        <p>9 AM onwards</p>
+        <p>At Home - Aashirwad, Panchavati colony,</p>
+        <p>New Bowenpally, Hyderabad.</p>
+        <a href="https://maps.app.goo.gl/jsuBjKQj2nm1BqAU7" target="_blank">View location →</a>
       </article>
     </div>
   </section>
@@ -495,9 +457,7 @@
     <div class="section-kicker" style="color:#f5d99a; text-align:left;">Meet the bride & groom</div>
     <h2>Our favourite<br>love story</h2>
     <p>
-      What began as a simple conversation grew into a friendship, shared laughs
-      and love of Biryani-Chai and Sushi-Matcha, embracing the culture and vibe
-      of two cities, and a promise to build a beautiful life together. We are
+      What began as a simple conversation grew into a friendship, shared laughs and love of Biryani-Chai and Sushi-Matcha, embracing the culture and vibe of two cities, and a promise to build a beautiful life together. We are
       grateful to have you with us as we celebrate these events.
     </p>
   </section>
@@ -512,17 +472,15 @@
         <h3>Hashtag</h3>
         <p>Share your photos with<br><strong>#PoorvajaWedsNithin</strong></p>
       </article>
-
       <article class="info-card">
         <div class="info-icon">☀</div>
         <h3>Weather</h3>
-        <p>Expect a warm July celebration. Light festive attire is perfect.</p>
+        <p>Expect a warm, July celebration. Light festive attire is perfect.</p>
       </article>
-
       <article class="info-card">
         <div class="info-icon">♥</div>
         <h3>Dress code</h3>
-        <p>Lavender on Haldi, traditional festive wear, bright colours, and your happiest smile.</p>
+        <p>Lavender on Haldi, Traditional festive wear, bright colours, and your happiest smile.</p>
       </article>
     </div>
   </section>
@@ -530,7 +488,6 @@
   <section class="countdown-wrap reveal">
     <div class="section-kicker">The countdown begins</div>
     <h2>We cannot wait</h2>
-
     <div class="countdown" id="countdown">
       <div class="time-box"><strong id="days">00</strong><span>Days</span></div>
       <div class="time-box"><strong id="hours">00</strong><span>Hours</span></div>
@@ -543,11 +500,7 @@
     <div class="section-kicker">Please RSVP</div>
     <h2>Your presence<br>means everything</h2>
     <p class="intro-copy">Kindly let us know if you will be joining us.</p>
-
-    <a class="button"
-       href="https://wa.me/917207758506?text=Hello!%20I%20would%20love%20to%20attend%20your%20wedding."
-       target="_blank"
-       rel="noopener">
+    <a class="button" href="https://wa.me/7207758506?text=Hello!%20I%20would%20love%20to%20attend%20your%20wedding." target="_blank">
       RSVP on WhatsApp
     </a>
   </section>
@@ -555,43 +508,41 @@
   <footer>POORVAJA & NITHIN · MADE WITH LOVE</footer>
 
   <script>
-    // ---------- Background music ----------
-    const music = document.getElementById("bgMusic");
 
-    music.volume = 0.45;
-
-    let musicStarted = false;
-
-    async function startBackgroundMusic() {
-      if (musicStarted) return;
-
-      try {
-        await music.play();
-        musicStarted = true;
-
-        window.removeEventListener("scroll", startBackgroundMusic);
-        window.removeEventListener("pointerdown", startBackgroundMusic);
-      } catch (error) {
-        console.warn("Music could not start yet:", error);
-      }
+  // ---------- Background music: start on first scroll ----------
+  const music = document.getElementById("bgMusic");
+  
+  music.volume = 0.45;
+  
+  let musicStarted = false;
+  
+  async function startBackgroundMusic() {
+    if (musicStarted) return;
+  
+    try {
+      await music.play();
+      musicStarted = true;
+  
+      // Music is now playing and will continue while the guest scrolls.
+      window.removeEventListener("scroll", startBackgroundMusic);
+    } catch (error) {
+      // Some mobile browsers may require a tap before they allow sound.
+      console.warn("Music could not start on scroll:", error);
     }
-
-    // Starts when the guest follows the "Scroll to open" prompt.
-    window.addEventListener("scroll", startBackgroundMusic, {
-      passive: true
-    });
-
-    // Fallback for Safari/iPhone and browsers that require a tap.
-    window.addEventListener("pointerdown", startBackgroundMusic, {
-      passive: true,
-      once: true
-    });
-
+  }
+  
+  // Start once the guest begins scrolling down the invitation.
+  window.addEventListener("scroll", startBackgroundMusic, {
+    passive: true
+  });
+    
     // ---------- Countdown ----------
+    // Change this to your wedding date/time.
     const weddingDate = new Date("July 3, 2026 10:05:00").getTime();
 
     function updateCountdown() {
-      const distance = weddingDate - Date.now();
+      const now = Date.now();
+      const distance = weddingDate - now;
 
       if (distance <= 0) {
         document.getElementById("countdown").innerHTML =
