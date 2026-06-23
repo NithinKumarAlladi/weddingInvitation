@@ -652,6 +652,13 @@
       once: true,
       passive: true
     });
+    
+    // Stops music when the browser window loses focus.
+    window.addEventListener("blur", pauseMusic);
+  
+    // Stops music when the user leaves or reloads the page.
+    window.addEventListener("pagehide", pauseMusic);
+    window.addEventListener("beforeunload", pauseMusic);
 
     // ---------- Countdown ----------
     const weddingDate = new Date("July 3, 2026 10:05:00").getTime();
